@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Json to javascript arays</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h2>Json to javascript arays</h2>
+    <p id="json-parse"></p>
+
+    <script>
+// Importantisimo declarar la variable var text = "";. Sino no funciona.
+        var text = '{"employees":[' +
+            '{"firstName":"John","lastName":"Doe" },' +
+            '{"firstName":"Anna","lastName":"Smith" },' +
+            '{"firstName":"Peter","lastName":"Jones" }]' +
+            '}';
+        var i;
+        var texto = "";
+        obj = JSON.parse(text);
+        len = obj.employees;
+        for (i = 0; i < len.length; i++) {
+            texto += len[i].firstName + " " + len[i].lastName + "</br>";
+        };
+        document.getElementById("json-parse").innerHTML = texto;
+    </script>
+</body>
+
+</html>
